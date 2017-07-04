@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorFirst" format="color" />
+    <attr name="colorSecond" format="color" />
+    <attr name="ringWidth" format="dimension" />
+    <attr name="gapItem" format="dimension" />
+    <attr name="countItem" format="integer" />
+    <attr name="imageCenter" format="reference" />
+    <declare-styleable name="Voice">
+        <attr name="colorFirst" />
+        <attr name="colorSecond" />
+        <attr name="ringWidth" />
+        <attr name="gapItem" />
+        <attr name="countItem" />
+        <attr name="imageCenter" />
+    </declare-styleable>
+
+</resources>

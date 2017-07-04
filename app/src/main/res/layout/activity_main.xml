@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a123.mobileproject.MainActivity">
+
+   <Button
+       android:id="@+id/main_story"
+       android:layout_marginTop="150dp"
+       android:layout_width="150dp"
+       android:layout_height="60dp"
+       android:layout_gravity="center"
+       android:gravity="center"
+       android:layout_marginBottom="10dp"
+       android:text="Story Mode"/>
+    <Button
+        android:id="@+id/main_challenge"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="Challenge Mode"/>
+    <Button
+        android:id="@+id/main_rank"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Ranking"/>
+    <Button
+        android:id="@+id/main_setting"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Setting"/>
+
+</LinearLayout>
