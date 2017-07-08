@@ -7,9 +7,11 @@ import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Display;
 import android.view.View;
+import android.widget.TextView;
 
-import com.example.a123.mobileproject.Service.MusicService;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -20,6 +22,7 @@ public class StoryModeActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),  GameActivity.class);
         startActivity(intent);
     }
+
 
 
 
