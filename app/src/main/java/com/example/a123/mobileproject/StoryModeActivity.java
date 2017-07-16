@@ -17,9 +17,23 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class StoryModeActivity extends AppCompatActivity {
+    int lv=1;
     @OnClick(R.id.activity_story_bt1)
     public void bt1(View v){
+        lv=1;
         Intent intent = new Intent(getApplicationContext(),  GameActivity.class);
+        Bundle lvBundle = new Bundle();
+        lvBundle.putInt("Level",lv);
+        intent.putExtras(lvBundle);
+        startActivity(intent);
+    }
+    @OnClick(R.id.activity_story_bt2)
+    public void bt2(View v){
+        lv=2;
+        Intent intent = new Intent(getApplicationContext(),  GameActivity.class);
+        Bundle lvBundle = new Bundle();
+        lvBundle.putInt("Level",lv);
+        intent.putExtras(lvBundle);
         startActivity(intent);
     }
 

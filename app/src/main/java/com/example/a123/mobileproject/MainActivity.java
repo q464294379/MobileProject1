@@ -1,8 +1,10 @@
 package com.example.a123.mobileproject;
 
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
@@ -16,32 +18,6 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean mIsBound = false;
-    private MusicService mServ;
-    private ServiceConnection Scon = new ServiceConnection() {
-
-        public void onServiceConnected(ComponentName name, IBinder
-                binder) {
-            mServ = ((MusicService.ServiceBinder) binder).getService();
-        }
-
-        public void onServiceDisconnected(ComponentName name) {
-            mServ = null;
-        }
-    };
-
-    void doBindService() {
-        bindService(new Intent(getApplicationContext(), MusicService.class),
-                Scon, Context.BIND_AUTO_CREATE);
-        mIsBound = true;
-    }
-
-    void doUnbindService() {
-        if (mIsBound) {
-            unbindService(Scon);
-            mIsBound = false;
-        }
-    }
 
 
 
@@ -57,15 +33,21 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    @OnClick(R.id.main_setting)
+    public void setting(View v){
+        Intent intent = new Intent(getApplicationContext(),  SettingActivity.class);
+        startActivity(intent);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        doBindService();
-        Intent music = new Intent();
-        music.setClass(this,MusicService.class);
-        startService(music);
     }
+
+
+
+
 }

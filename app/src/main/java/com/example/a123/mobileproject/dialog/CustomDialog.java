@@ -33,13 +33,13 @@ public class CustomDialog extends Dialog {
 
     @OnClick(R.id.dialog_continue)
     public void cont(View v){
-        listener.onOkClick("You click continue");
+        listener.onOkClick("continue");
         cancel();
     }
 
     @OnClick(R.id.dialog_exit)
     public void ex(View v){
-        listener.onOkClick("You click exit");
+        listener.onOkClick("exit");
         System.exit(0);
         cancel();
     }

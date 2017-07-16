@@ -24,14 +24,12 @@ public class RankFragment extends Fragment {
     public RankFragment() {
         context = getContext();
         contentList = new ArrayList<String>();
-        contentList.add("ViewPager");
-        contentList.add("ImageScaleType");
-        contentList.add("9Patch");
-        contentList.add("Notification");
-        contentList.add("AdvanceListView");
-        contentList.add("AdvanceViewPager");
-        contentList.add("LaunchMode");
-        contentList.add("ActivityResult");
+        contentList.add("1. Weng");
+        contentList.add("2. John");
+        contentList.add("3. Jack");
+        contentList.add("4. Xin");
+        contentList.add("5. Sherry");
+
     }
 
     @Override
